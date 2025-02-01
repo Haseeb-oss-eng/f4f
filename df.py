@@ -5,13 +5,15 @@ import requests
 from io import StringIO
 from io import BytesIO
 
+
 # Function to convert Google Drive shareable link to direct download link
 def convert_google_drive_link(url):
     file_id = url.split('/d/')[1].split('/')[0]
     return f"https://drive.google.com/uc?export=download&id={file_id}"
 
 # URL of the CSV file (modify this with your file's actual ID)
-csv_url = "https://drive.google.com/file/d/1hg0fLlBPotgKZC8pQ0dEF0XkCWAQ-SCe/view?usp=sharing"
+urls = st.text_input("Enter drive Url:")
+csv_url = urls #"https://drive.google.com/file/d/1hg0fLlBPotgKZC8pQ0dEF0XkCWAQ-SCe/view?usp=sharing"
 direct_download_url = convert_google_drive_link(csv_url)
 
 # Use requests to fetch the CSV file
