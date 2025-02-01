@@ -1,4 +1,7 @@
-streamlit==1.26.0
-pandas==2.0.3
-plotly==5.15.0
-requests==2.31.0
+streamlit==1.41.1
+pandas==2.2.3
+plotly==6.0.0
+requests==2.32.3
+numpy==2.2.2
+pillow==11.1.0
+packaging==24.2
